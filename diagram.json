@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 307.8, "left": 28.2, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 64, "left": 44, "attrs": { "pins": "i2c" } },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -128.4,
+      "left": -34.6,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -47.7,
+      "left": -130.2,
+      "attrs": { "temperature": "32.4" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -4.8,
+      "left": -38.95,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "dht1:SDA", "uno:2", "purple", [ "v192", "h370.4" ] ],
+    [ "dht1:GND", "lcd1:GND", "black", [ "v0" ] ],
+    [ "led1:A", "uno:9", "green", [ "v-4.4", "h-210.8", "v393.6", "h335.2" ] ],
+    [ "lcd1:SDA", "uno:A4", "cyan", [ "h-115.2", "v451.4", "h345.6", "v19.2" ] ],
+    [ "lcd1:SCL", "uno:A5", "yellow", [ "h-96", "v115.5", "h460.8", "v326.4", "h-124.8" ] ],
+    [ "dht1:VCC", "lcd1:VCC", "red", [ "v38.4" ] ],
+    [ "led1:C", "r1:1", "black", [ "v0" ] ],
+    [ "r1:2", "lcd1:GND", "black", [ "h0", "v66", "h0" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v0", "h-67.2", "v470.4", "h48" ] ],
+    [ "dht1:GND", "uno:GND.2", "black", [ "v480", "h288" ] ]
+  ],
+  "dependencies": {}
+}
