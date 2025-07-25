@@ -8,7 +8,7 @@
 
 ## 🔧 Projects
 
-- 🔥 [Heater Control System](https://github.com/Koushik8617/Heater-contorl-wokwi) — A basic temperature-based heater simulation using Arduino and Wokwi
+- 🔥 [Heater Control System](https://github.com/Koushik8617/Heater-contorl-wokwi.git) — A basic temperature-based heater simulation using Arduino and Wokwi
 - 🌡️ DHT22 + LCD + LED Simulation Project (Wokwi)
 
 ---
